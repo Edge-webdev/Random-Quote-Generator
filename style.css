@@ -15,7 +15,7 @@ body {
   justify-content: center;
   flex-direction: column;
   border: 2px black solid;
-  padding: 5px 30px;
+  padding: 15px 30px;
   background-color: white;
   width: 20%;
   height: 25%;
@@ -29,7 +29,7 @@ body {
 
 .quote {
   font-size: 15px;
-  margin: 2px 0 5px;
+  margin: 2px 0;
   text-align: center;
 }
 
@@ -39,8 +39,9 @@ body {
 
 .generate-quote {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  padding: 5px 10px;
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 10px 30px;
   border: 1px black solid;
   border-radius: 5px;
 }
