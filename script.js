@@ -1,16 +1,16 @@
 // Grabs elements from the DOM
-const quote = document.querySelector('.quote');
-const quoteAuthor = document.querySelector('.quote-author');
+const quoteContainer = document.querySelector('.quote-container');
 const button = document.querySelector('.generate-quote');
 
 async function fetchQuote() {
-  // Grabs the random quote and converts it to JSON
-  const response = await fetch('https://api.quotable.io/random');
-  const data = await response.json();
-
-  // Changes the inner HTML of the quote and quote-author element to their matching pieces of data
-  quote.innerHTML = `${data.content}`;
-  quoteAuthor.innerHTML = `<em>- ${data.author}</em>`;
+  fetch('https://api.quotable.io/random')
+    .then((response) => response.json())
+    .then((data) => {
+      quoteContainer.innerHTML = `
+      <h4 class="quote">${data.content}</h4>
+      <p class="quote-author"><em>- ${data.author}</em></p>
+    `;
+    });
 }
 
 fetchQuote();
