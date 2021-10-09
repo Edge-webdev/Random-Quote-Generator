@@ -7,8 +7,8 @@ async function fetchQuote() {
     .then((response) => response.json())
     .then((data) => {
       quoteContainer.innerHTML = `
-      <h4 class="quote">${data.content}</h4>
-      <p class="quote-author"><em>- ${data.author}</em></p>
+      <h6>"${data.content}"</h6>
+      <p class="text-secondary"><em>- ${data.author}</em></p>
     `;
     });
 }
